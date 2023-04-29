@@ -6,4 +6,14 @@ class Person:
     def __init__(self,name,age):
         self.name = name
         self.age = age
-        print(name,age)
+        show()
+    
+    def show(self)
+        print(self.name,self.age)
+
+people = []
+
+for i in range(4):
+    people.append(Person(names[i],ages[i]))
+
+#print(people)
