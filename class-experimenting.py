@@ -6,14 +6,23 @@ class Person:
     def __init__(self,name,age):
         self.name = name
         self.age = age
-        show()
+        
+    def __str__(self):
+        return self.name+' '+str(self.age)
+        
+    def __eq__(self,other):
+        return (self.age==other.age)
     
-    def show(self)
-        print(self.name,self.age)
+    def __hash__(self):
+        return hash((self.age))
+    
+    def birthday(self):
+        self.age += 1
 
-people = []
+people = set()
 
 for i in range(4):
-    people.append(Person(names[i],ages[i]))
+    people.add(Person(names[i],ages[i]))
 
-#print(people)
+for person in people:
+    print(person)
