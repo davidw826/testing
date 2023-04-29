@@ -22,7 +22,10 @@ class Person:
 people = set()
 
 for i in range(4):
-    people.add(Person(names[i],ages[i]))
+    new = Person(names[i],ages[i])
+    if new.name == "Sarah":
+        new.birthday()
+    people.add(new)
 
 for person in people:
     print(person)
